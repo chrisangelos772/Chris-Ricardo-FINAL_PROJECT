@@ -1,0 +1,80 @@
+.text {
+   text-align: center;
+    padding-top:2%;
+    font-size: 20px;
+    // padding-left: 18%;
+}
+
+.title1{
+    text-align: center;
+    color: #C51016;
+}
+.reservation-form{
+     text-align: center;
+    padding-top:4%;
+    // padding-left: 18%;
+
+}
+
+.res{
+    box-shadow: inset 0 0 0 1000px rgba(32, 32, 32, 0.747);
+    background-image: url(https://selfgrowth.info/photos/food-HD-galleries/big-food-infographics-free-royalty3533.jpg);
+    background-size: cover;
+    color: white;
+    border: solid 2px #C51016;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 80px;
+    padding: 60px;
+}
+
+.res-label{
+    margin-right: 3%;
+    margin-bottom: 5%;
+    color: white;
+
+}
+
+.res-input{
+    margin-right: 3%;
+    margin-bottom: 5%;
+   border-style: solid,;
+   border-bottom:4px;
+   border-top: unset;
+   border-left: unset;
+   border-right: unset;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+input:focus{
+    outline-style:unset;
+    outline-color: #C51016;
+   box-shadow: 0 0 0 1pt #C51016;
+   border-radius: 10px;
+    
+}
+
+.mainlabel#r1, #r2 {
+    width: 100px;
+    height: 20px;
+    font-size: 15px;
+    padding: 5px;
+}
+
+
+
+.res-buttons{
+    padding-top: 40px;
+  justify-content: center;
+  grid-column-gap: 50px;
+  margin-bottom: 30px;
+}
+
+
+a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+

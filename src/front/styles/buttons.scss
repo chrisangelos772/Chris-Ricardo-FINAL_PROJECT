@@ -1,0 +1,52 @@
+$color-dark: white;
+$color-light: #C51016;
+$bg-size-end: 2;
+$dur: 0.5s;
+
+.buttons{
+position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    margin-top: 200px;
+}
+
+.buttons1{
+     margin-bottom: 150px;
+}
+
+.mainbutton[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+   display: grid;
+}
+
+.mainlabel {    
+  outline: none;
+  user-select: none;
+  color: $color-dark;
+font-size:25px;
+  letter-spacing: 0.04rem;
+  padding-top: 5px;
+  cursor: pointer;
+  border: black solid 0.6px;
+  border-radius: .8rem;
+     text-align: center;
+  background: $color-light;
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  height: 40px;
+-webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+  &:active {
+    top: 3px;
+    box-shadow: none;
+  }
+}
+
+
