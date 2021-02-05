@@ -5,11 +5,13 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Appetizer } from "./views/Appetizer";
 import { ProductDetails } from "./views/ProductDetails";
-import { Single } from "./views/single";
+
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { Reservation } from "./views/reservation";
+import { ContactUs } from "./views/contactus";
 
 //create your first component
 const Layout = () => {
@@ -32,14 +34,17 @@ const Layout = () => {
 						<Route exact path="/product/:productID">
 							<ProductDetails />
 						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
+						<Route exact path="/reservation">
+							<Reservation />
+						</Route>
+						<Route exact path="/contactus">
+							<ContactUs />
 						</Route>
 						<Route>
 							<h1>hello world</h1>
 						</Route>
 					</Switch>
-					<Footer />
+					{/* <Footer /> */}
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>
