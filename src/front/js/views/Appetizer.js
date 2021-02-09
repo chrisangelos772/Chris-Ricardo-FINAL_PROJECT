@@ -18,7 +18,7 @@ export const Appetizer = () => {
 				<Row>
 					{store.products.map((item, index) => (
 						<Col xs={12} sm={6} key={index} className="mb-4">
-							<Card>
+							<Card className="h-100">
 								<Link to={`/product/${index}`}>
 									<Card.Img variant="top" src={item.img} />
 								</Link>
@@ -27,7 +27,14 @@ export const Appetizer = () => {
 									<Card.Text className="description">{item.description}</Card.Text>
 								</Card.Body>
 								<Card.Footer>
-									<medium className="text-muted">{item.price}</medium>
+									<Row>
+										<Col>
+											<medium className="text-muted">${item.price}</medium>
+										</Col>
+										<Col>
+											<button onClick={e => actions.addToCart(item)}>Add to cart</button>{" "}
+										</Col>
+									</Row>
 								</Card.Footer>
 							</Card>
 						</Col>

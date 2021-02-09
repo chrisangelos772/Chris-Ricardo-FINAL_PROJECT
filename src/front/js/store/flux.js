@@ -3,49 +3,51 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			products: [
 				{
-					name: "Tomato Bisque",
-					price: "$1.95",
-					size: "cup",
-					img: "#",
-					description: "blah blah lorem foodum."
+					name: "Quesadillas",
+					price: 12.95,
+					size: "Plate",
+					img: "https://images.pitboss-grills.com/catalog/recipes/1200px/IMG_0488.jpg",
+					description:
+						"Chicken, Beef or Vegan Quesadilla's. With your choice of pepperjack, monterey, cheddar or smoked gouda cheese, green peppers and red peppers, and black beans.            served with sour cream, salsa and guacamole, you cannot go wrong with these!"
 				},
 				{
 					name: "Ultimate Nachos",
-					price: "$15.99",
+					price: 15.99,
 					size: "plate",
-					img: "https://images.pitboss-grills.com/catalog/recipes/1200px/IMG_0488.jpg",
+					img: "https://www.savoryspiceshop.com/images/blog/extremenachos/ultimate-nachos-1.jpg",
 					description:
-						"If you're a nacho fan, these are a MUST! WARNING!\nThis is a tower of nachos, no ONE man can eat. Best shared with a group of 3-4 people. Stacked with ground beef (chicken on request), black beans, purple onions, green peppers, red peppers, and yellow peppers, wild rice, smothered in melted Smoked Gouda and shredded cheddar cheese, black olives, jalapeno's, sour cream, Guac, and salsa. This truely is a MONSTER of an appetizer."
+						"If you're a nacho fan, these are a MUST! WARNING!\nThis is a tower of nachos, no ONE man can eat. Best shared with a group of 3-4 people. Stacked with ground beef (chicken on request), black beans, purple onions, green peppers, red peppers, and yellow peppers, corn, smothered in melted Smoked Gouda and shredded cheddar cheese, black olives, jalapeno's, sour cream, Guac, and salsa. This truely is a MONSTER of an appetizer."
 				},
 				{
 					name: "Tomato Bisque",
-					price: "$1.95",
+					price: 1.95,
 					size: "cup",
 					img: "#",
 					description: "blah blah lorem foodum."
 				},
 				{
 					name: "Tomato Bisque",
-					price: "$1.95",
+					price: 1.95,
 					size: "cup",
 					img: "#",
 					description: "blah blah lorem foodum."
 				},
 				{
 					name: "Tomato Bisque",
-					price: "$1.95",
+					price: 1.95,
 					size: "cup",
 					img: "#",
 					description: "blah blah lorem foodum."
 				},
 				{
 					name: "Tomato Bisque",
-					price: "$1.95",
+					price: 1.95,
 					size: "cup",
 					img: "#",
 					description: "blah blah lorem foodum."
 				}
 			],
+			cart: [],
 			demo: [
 				{
 					title: "FIRST",
@@ -63,6 +65,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
+			},
+			addToCart: item => {
+				const store = getStore();
+				const cart = store.cart.push(item);
+				setStore(store);
 			},
 			loadSomeData: () => {
 				/**

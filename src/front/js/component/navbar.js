@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartIcon } from "./Carticon";
+import { LoginComponent } from "./loggedIn";
+
+import { Context } from "../store/appContext";
+
 export const Navbar = () => {
+	const { store, actions } = useContext(Context);
 	return (
 		<div className="container">
 			<nav className="navbar">
@@ -13,10 +18,10 @@ export const Navbar = () => {
 						/>
 					</span>
 				</Link>
-
+				<LoginComponent />
 				{/* IT SHOULD BE LINKED TO THE CART VIEW */}
 				<Link to="/Cart">
-					<CartIcon value={3} />
+					<CartIcon value={store.cart.length} />
 				</Link>
 			</nav>
 		</div>
