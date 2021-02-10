@@ -50,17 +50,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 			drinks: [
 				{
 					name: "Beer",
-					price: 1.95,
-					size: "cup",
-					img: "#",
-					description: "blah blah lorem foodum."
+					price: 5.95,
+					size: "16 oz",
+					img:
+						"https://images.crateandbarrel.com/is/image/Crate/DirectionPilsner17ozSHS16/$web_pdp_main_carousel_med$/190411135002/direction-pilsner-beer-glass.jpg",
+					description:
+						"We have a variety of beers on tap. Coors, Michelob Ultra, Miller High Life, Shock Top, and more. Ask your bartenter for a full list "
 				},
 				{
 					name: "Wine",
-					price: 1.95,
-					size: "cup",
-					img: "#",
-					description: "blah blah lorem foodum."
+					price: 8.95,
+					size: "8 oz Glass",
+					img: "https://cdnimg.webstaurantstore.com/images/products/large/196274/730327.jpg",
+					description:
+						"Large variety of red, white and pink wines. Ask your server/bartender for a full list."
 				}
 			],
 			cart: [],

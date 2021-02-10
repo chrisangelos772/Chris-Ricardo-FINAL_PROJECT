@@ -18,14 +18,12 @@ body{
   white-space: pre-line;
 }
 
-.login {
-    a:hover {
-    color: red;
-}
-}
-
 a {
-a:hover {
-    color: red;
-}
+    &:hover {
+        text-decoration: none;
+        color: red;
+        svg path{
+            fill: red;
+        }
+    }
 }
