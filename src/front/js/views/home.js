@@ -12,28 +12,28 @@ export const Home = () => (
 				<Link to="/appetizer">
 					<input className="mainbutton" type="checkbox" id="cb1" />
 					<label className="mainlabel" htmlFor="cb1">
-						FOOD MENU
+						Food Menu
 					</label>
 				</Link>
 				<input className="mainbutton" type="checkbox" id="cb2" />
 				<label className="mainlabel" htmlFor="cb2">
-					DRINKS MENU
+					Drinks Menu
 				</label>
 				<input className="mainbutton" type="checkbox" id="cb3" />
 				<label className="mainlabel" htmlFor="cb3">
-					SPECIALS MENU
+					Specials Menu
 				</label>
 			</div>
 			<Link to="/reservation">
 				<input className="mainbutton" type="checkbox" id="cb4" />
 				<label className="mainlabel" htmlFor="cb4">
-					RESERVATION
+					Reservation
 				</label>
 			</Link>
 			<Link to="/contactus">
 				<input className="mainbutton" type="checkbox" id="cb5" />
 				<label className="mainlabel" htmlFor="cb5">
-					CONTACT US
+					Contact us
 				</label>
 			</Link>
 		</div>

@@ -44,7 +44,7 @@ const Layout = () => {
 							<h1>hello world</h1>
 						</Route>
 					</Switch>
-					{/* <Footer /> */}
+					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>

@@ -18,13 +18,14 @@
 
 .res{
     box-shadow: inset 0 0 0 1000px rgba(32, 32, 32, 0.747);
-    background-image: url(https://selfgrowth.info/photos/food-HD-galleries/big-food-infographics-free-royalty3533.jpg);
+    background-image: url(https://image.freepik.com/free-photo/wood-table-top-bokeh-coffee-shop-cafe-restaurant-background_43029-830.jpg);
     background-size: cover;
     color: white;
-    border: solid 2px #C51016;
+    // border: solid 2px #C51016;
     width: 100%;
-    border-radius: 10px;
+    // border-radius: 10px;
     margin-top: 80px;
+    margin-bottom:150px;
     padding: 60px;
 }
 
@@ -69,6 +70,7 @@ input:focus{
   justify-content: center;
   grid-column-gap: 50px;
   margin-bottom: 30px;
+  
 }
 
 
