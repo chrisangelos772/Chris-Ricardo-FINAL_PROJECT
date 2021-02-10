@@ -3,6 +3,7 @@ import mainLogo from "../../img/main-logo.png";
 import "../../styles/home.scss";
 import "../../styles/buttons.scss";
 import { Link } from "react-router-dom";
+import { Footer } from "../component/footer";
 
 export const Home = () => (
 	<div className="text-center mt-5">
@@ -15,10 +16,12 @@ export const Home = () => (
 						FOOD MENU
 					</label>
 				</Link>
-				<input className="mainbutton" type="checkbox" id="cb2" />
-				<label className="mainlabel" htmlFor="cb2">
-					DRINKS MENU
-				</label>
+				<Link to="/drinks">
+					<input className="mainbutton" type="checkbox" id="cb2" />
+					<label className="mainlabel" htmlFor="cb2">
+						DRINKS MENU
+					</label>
+				</Link>
 				<input className="mainbutton" type="checkbox" id="cb3" />
 				<label className="mainlabel" htmlFor="cb3">
 					SPECIALS MENU

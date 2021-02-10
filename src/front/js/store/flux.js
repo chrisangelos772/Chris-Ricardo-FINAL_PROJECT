@@ -47,6 +47,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 					description: "blah blah lorem foodum."
 				}
 			],
+			drinks: [
+				{
+					name: "Beer",
+					price: 1.95,
+					size: "cup",
+					img: "#",
+					description: "blah blah lorem foodum."
+				},
+				{
+					name: "Wine",
+					price: 1.95,
+					size: "cup",
+					img: "#",
+					description: "blah blah lorem foodum."
+				}
+			],
 			cart: [],
 			demo: [
 				{
