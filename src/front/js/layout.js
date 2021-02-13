@@ -14,6 +14,7 @@ import { Footer } from "./component/footer";
 import { Reservation } from "./views/reservation";
 import { ContactUs } from "./views/contactus";
 import { Cart } from "./views/cart";
+import { Specials } from "./views/specials";
 
 //create your first component
 const Layout = () => {
@@ -38,6 +39,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/product/:productID">
 							<ProductDetails />
+						</Route>
+						<Route exact path="/specials">
+							<Specials />
 						</Route>
 						<Route exact path="/reservation">
 							<Reservation />
