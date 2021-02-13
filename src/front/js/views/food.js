@@ -6,10 +6,11 @@ import Row from "react-bootstrap/Row";
 import { Context } from "../store/appContext";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
+import Button from "react-bootstrap/Button";
 
-import "../../styles/Appetizer.scss";
+import "../../styles/food.scss";
 
-export const Appetizer = () => {
+export const Food = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
@@ -32,7 +33,9 @@ export const Appetizer = () => {
 											<medium className="text-muted">${item.price}</medium>
 										</Col>
 										<Col>
-											<button onClick={e => actions.addToCart(item)}>Add to cart</button>{" "}
+											<button className="btn btn-danger" onClick={e => actions.addToCart(item)}>
+												Add to cart
+											</button>{" "}
 										</Col>
 									</Row>
 								</Card.Footer>
@@ -41,10 +44,9 @@ export const Appetizer = () => {
 					))}
 				</Row>
 			</CardGroup>
-
-			<Link to="/">
-				<button className="btn btn-primary">Back home</button>
-			</Link>
+			<Button variant="danger" as={Link} to="/">
+				Go Back
+			</Button>
 		</div>
 	);
 };

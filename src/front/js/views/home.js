@@ -10,7 +10,7 @@ export const Home = () => (
 		<img className="main-logo" src={mainLogo} />
 		<div className="buttons">
 			<div className="buttons1">
-				<Link to="/appetizer">
+				<Link to="/food">
 					<input className="mainbutton" type="checkbox" id="cb1" />
 					<label className="mainlabel" htmlFor="cb1">
 						Food Menu
@@ -22,6 +22,7 @@ export const Home = () => (
 						Drinks Menu
 					</label>
 				</Link>
+
 				<Link to="/specials">
 					<input className="mainbutton" type="checkbox" id="cb3" />
 					<label className="mainlabel" htmlFor="cb3">
