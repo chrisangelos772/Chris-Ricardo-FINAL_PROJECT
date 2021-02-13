@@ -57,69 +57,61 @@ const getState = ({ getStore, getActions, setStore }) => {
 						name: "Mango Mojito",
 						price: 8.95,
 						size: "12 oz",
-						img:
-							"https://i2.wp.com/www.giftofhospitality.com/wp-content/uploads/2019/07/mango-mojito-8.jpg?resize=683%2C1024&ssl=1",
+						img: "https://www.veganricha.com/wp-content/uploads/2016/06/mango-mojito-5081.jpg",
 						description:
 							"Deliciously refreshing, our Mango Mojito's are made with only the freshest of mangos, hand juiced and muddled, goes well on a hot summer day."
 					},
 					{
-						name: "Beer",
-						price: 5.95,
-						size: "16 oz",
-						img:
-							"https://images.crateandbarrel.com/is/image/Crate/DirectionPilsner17ozSHS16/$web_pdp_main_carousel_med$/190411135002/direction-pilsner-beer-glass.jpg",
+						name: "Smoked Old Fashioned",
+						price: 12.95,
+						size: "10 oz",
+						img: "https://www.acouplecooks.com/wp-content/uploads/2020/06/Smoked-Old-Fashioned-008.jpg",
 						description:
-							"We have a variety of beers on tap. Coors, Michelob Ultra, Miller High Life, Shock Top, and more. Ask your bartenter for a full list "
+							"Made with Bourbon or rye whiskey, Sugar cube, Water, Angostura bitters, Orange peel and cocktail cherry garnish with a smokey effect for appeal as well as added flavor, our old fashioned is one for the books."
 					},
 					{
-						name: "Beer",
-						price: 5.95,
-						size: "16 oz",
+						name: "Blackberry Moscow Mule",
+						price: 9.95,
+						size: "12 oz",
 						img:
-							"https://images.crateandbarrel.com/is/image/Crate/DirectionPilsner17ozSHS16/$web_pdp_main_carousel_med$/190411135002/direction-pilsner-beer-glass.jpg",
+							"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/moscow-mule-alcoholic-drink-moscow-mule-cocktail-royalty-free-image-922744264-1564688972.jpg?crop=0.668xw:1.00xh;0.0689xw,0&resize=640:*",
 						description:
-							"We have a variety of beers on tap. Coors, Michelob Ultra, Miller High Life, Shock Top, and more. Ask your bartenter for a full list "
+							"MAde with fresh Blackberries, Mint, Lime Juice, Vodka, all shaken together, poured into a copper cup over ice and added ginger beer at the end, this moscow mule will have you wanting more!"
 					}
 				],
 				beer: [
 					{
-						name: "Heinikin",
+						name: "STELLA ARTOIS",
 						price: 5.95,
 						size: "16 oz",
 						description: ""
 					},
 					{
-						name: "Heinikin",
+						name: "BUDWEISER",
 						price: 5.95,
 						size: "16 oz",
 						description: ""
 					},
 					{
-						name: "Heinikin",
+						name: "CORONA",
 						price: 5.95,
 						size: "16 oz",
 						description: ""
 					},
 					{
-						name: "Heinikin",
+						name: "GUINNESS",
 						price: 5.95,
 						size: "16 oz",
 						description: ""
 					},
 					{
-						name: "Heinikin",
+						name: "PERONI NASTRO AZZURRO",
 						price: 5.95,
 						size: "16 oz",
 						description: ""
 					},
 					{
-						name: "Heinikin",
-						price: 5.95,
-						size: "16 oz",
-						description: ""
-					},
-					{
-						name: "Heinikin",
+						name: "HEINEKEN",
 						price: 5.95,
 						size: "16 oz",
 						description: ""
