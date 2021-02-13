@@ -81,10 +81,14 @@ export const Drinks = () => {
 					))}
 				</Row>
 			</CardGroup>
-
+			<br />
+			<br />
+			<br />
 			<h2>Beer Menu</h2>
 			<ListGroup>{store.drinks.beer.map((item, index) => createListItems(item, index))}</ListGroup>
-
+			<br />
+			<br />
+			<br />
 			<h2>Wine Menu</h2>
 			<ListGroup>{store.drinks.wine.map((item, index) => createListItems(item, index))}</ListGroup>
 			<Button variant="danger" as={Link} to="/">
