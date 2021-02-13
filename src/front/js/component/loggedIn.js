@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import Dropdown from "react-bootstrap/Dropdown";
 
 export const LoginComponent = () => {
-	const [loggedIn, setLoggedIn] = useState(false);
+	const [loggedIn, setLoggedIn] = useState(true);
 
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
@@ -15,9 +18,20 @@ export const LoginComponent = () => {
 		<>
 			<div className="login ml-auto mr-3">
 				{loggedIn ? (
-					<Link to="#" onClick={() => setLoggedIn(!loggedIn)}>
-						logout
-					</Link>
+					<Dropdown>
+						<Dropdown.Toggle variant="danger" id="dropdown-basic">
+							<FontAwesomeIcon icon={faUserCircle} />
+						</Dropdown.Toggle>
+
+						<Dropdown.Menu>
+							<Dropdown.Item as={Link} to="/account">
+								Account
+							</Dropdown.Item>
+							<Dropdown.Item href="#" onClick={() => setLoggedIn(!loggedIn)}>
+								logout
+							</Dropdown.Item>
+						</Dropdown.Menu>
+					</Dropdown>
 				) : (
 					<Link to="#" onClick={handleShow}>
 						login
