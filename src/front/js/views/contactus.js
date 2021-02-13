@@ -4,6 +4,7 @@ import "../../styles/home.scss";
 import "../../styles/buttons.scss";
 import { Link } from "react-router-dom";
 import "../../styles/contactus.scss";
+import Button from "react-bootstrap/Button";
 
 export const ContactUs = () => (
 	<div className="cont">
@@ -36,8 +37,12 @@ export const ContactUs = () => (
 				<input className="res-input" type="email" id="email" name="email" />
 			</div>
 			<div className="res-buttons row">
-				<input className="mainlabel col-4" type="" id="r1" value="Submit" />
-				<input className="mainlabel col-4" type="" id="r2" value="Go Back" />
+				<Button variant="danger">Submit</Button>
+				<Button variant="danger" as={Link} to="/">
+					Go Back
+				</Button>
+				{/* <input className="mainlabel col-4" type="" id="r1" value="Submit" />
+				<input className="mainlabel col-4" type="" id="r2" value="Go Back" /> */}
 			</div>
 		</form>
 	</div>

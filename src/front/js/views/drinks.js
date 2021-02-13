@@ -7,16 +7,14 @@ import { Context } from "../store/appContext";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 
-import "../../styles/Appetizer.scss";
-
-export const Appetizer = () => {
+export const Drinks = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
 		<div className="container">
 			<CardGroup>
 				<Row>
-					{store.products.map((item, index) => (
+					{store.drinks.map((item, index) => (
 						<Col xs={12} sm={6} key={index} className="mb-4">
 							<Card className="h-100">
 								<Link to={`/product/${index}`}>

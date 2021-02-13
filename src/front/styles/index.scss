@@ -17,3 +17,13 @@ body{
 .description {
   white-space: pre-line;
 }
+
+a {
+    &:hover {
+        text-decoration: none;
+        color: red;
+        svg path{
+            fill: red;
+        }
+    }
+}

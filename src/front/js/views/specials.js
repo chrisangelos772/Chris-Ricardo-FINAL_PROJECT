@@ -8,8 +8,9 @@ import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 
 import "../../styles/Appetizer.scss";
+import "../../styles/specials.scss";
 
-export const Appetizer = () => {
+export const Specials = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
