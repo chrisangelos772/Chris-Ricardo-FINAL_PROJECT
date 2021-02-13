@@ -9,6 +9,7 @@ import CardGroup from "react-bootstrap/CardGroup";
 import ListGroup from "react-bootstrap/ListGroup";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import Button from "react-bootstrap/Button";
 
 export const Drinks = () => {
 	const { store, actions } = useContext(Context);
@@ -32,9 +33,9 @@ export const Drinks = () => {
 					</Row>
 					<Row>
 						<Col>
-							<Link to="#">
-								<FontAwesomeIcon icon={faCartPlus} onClick={e => actions.addToCart(item)} />
-							</Link>
+							<button className="btn btn-danger" onClick={e => actions.addToCart(item)}>
+								Add to cart
+							</button>{" "}
 						</Col>
 					</Row>
 				</Col>
@@ -63,12 +64,15 @@ export const Drinks = () => {
 											<medium className="text-muted">${item.price}</medium>
 										</Col>
 										<Col>
-											<Link to="#">
+											<button className="btn btn-danger" onClick={e => actions.addToCart(item)}>
+												Add to cart
+											</button>{" "}
+											{/* <Link to="#">
 												<FontAwesomeIcon
 													icon={faCartPlus}
 													onClick={e => actions.addToCart(item)}
 												/>
-											</Link>
+											</Link> */}
 										</Col>
 									</Row>
 								</Card.Footer>
@@ -87,10 +91,9 @@ export const Drinks = () => {
 			<br />
 			<h2>Wine Menu</h2>
 			<ListGroup>{store.drinks.wine.map((item, index) => createListItems(item, index))}</ListGroup>
-			<br />
-			<Link to="/">
-				<button className="btn btn-primary">Back home</button>
-			</Link>
+			<Button variant="danger" as={Link} to="/">
+				Go Back
+			</Button>
 		</div>
 	);
 };

@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import ListGroup from "react-bootstrap/ListGroup";
-
-// import "../../styles/Appetizer.scss";
+import Button from "react-bootstrap/Button";
 
 export const Cart = () => {
 	const { store, actions } = useContext(Context);
@@ -56,6 +55,9 @@ export const Cart = () => {
 					</ListGroup.Item>
 				))}
 			</ListGroup>
+			<Button variant="danger" as={Link} to="/">
+				Go Back
+			</Button>
 		</div>
 	);
 };
