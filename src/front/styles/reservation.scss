@@ -9,12 +9,6 @@
     text-align: center;
     color: #C51016;
 }
-.reservation-form{
-     text-align: center;
-    padding-top:4%;
-    // padding-left: 18%;
-
-}
 
 .res{
     box-shadow: inset 0 0 0 1000px rgba(32, 32, 32, 0.747);
@@ -29,41 +23,22 @@
     padding: 60px;
 }
 
-.res-label{
-    margin-right: 3%;
-    margin-bottom: 5%;
-    color: white;
 
+.text-res{
+   margin-top: 50px;
 }
 
-.res-input{
-    margin-right: 3%;
-    margin-bottom: 5%;
-   border-style: solid,;
-   border-bottom:4px;
-   border-top: unset;
-   border-left: unset;
-   border-right: unset;
-    border-radius: 10px;
-    font-size: 15px;
-}
 
-input:focus{
+
+
+.text-res:focus{
     outline-style:unset;
     outline-color: #C51016;
    box-shadow: 0 0 0 1pt #C51016;
-   border-radius: 10px;
+   border-radius: 2px;
+
     
 }
-
-.mainlabel#r1, #r2 {
-    width: 100px;
-    height: 20px;
-    font-size: 15px;
-    padding: 5px;
-}
-
-
 
 .res-buttons{
     padding-top: 40px;
