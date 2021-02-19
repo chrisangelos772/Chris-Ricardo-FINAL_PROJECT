@@ -91,6 +91,8 @@ export const Drinks = () => {
 			<br />
 			<h2>Wine Menu</h2>
 			<ListGroup>{store.drinks.wine.map((item, index) => createListItems(item, index))}</ListGroup>
+			<br />
+			<br />
 			<Button variant="danger" as={Link} to="/">
 				Go Back
 			</Button>
