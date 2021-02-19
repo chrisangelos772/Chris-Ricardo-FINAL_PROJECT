@@ -50,6 +50,19 @@ export const Cart = () => {
 		setTotal(Math.trunc(Number(runningTotal * 0.07 + runningTotal) * 100) / 100);
 	};
 
+	const handleDelete = index => {
+		let tempCart = cart;
+		tempCart.splice(index, 1);
+		setCart(tempCart);
+	};
+	const handleQtyChange = (newQty, index) => {
+		let tempCart = cart;
+		if (typeof tempCart[index] !== "undefined" && typeof tempCart[index].qty !== "undefined") {
+			tempCart[index].qty = newQty;
+			setCart(tempCart);
+		}
+	};
+
 	return (
 		<div className="container">
 			<Row>
@@ -57,19 +70,34 @@ export const Cart = () => {
 				<Col>Qty</Col>
 				<Col>Price Per</Col>
 				<Col>Total</Col>
+				<Col>Action</Col>
 			</Row>
 			<ListGroup>
 				{cart.map((item, index) => (
 					<ListGroup.Item key={index}>
 						<Row>
 							<Col>{item.name}</Col>
-							<Col>{item.qty}</Col>
+							<Col>
+								<input
+									type="number"
+									name="quantity"
+									min="1"
+									step="1"
+									onChange={e => handleQtyChange(e.target.value, index)}
+								/>
+							</Col>
 							<Col>${item.price}</Col>
 							<Col>${item.total}</Col>
+							<Col>
+								<Link to={`#`}>
+									<i className="fas fa-trash-alt" onClick={e => handleDelete(index)} />
+								</Link>
+							</Col>
 						</Row>
 					</ListGroup.Item>
 				))}
 			</ListGroup>
+
 			<br />
 			<ListGroup>
 				<ListGroup.Item>

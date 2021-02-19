@@ -188,6 +188,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const cart = store.cart.push(item);
 				setStore(store);
 			},
+
 			loadSomeData: () => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
