@@ -43,6 +43,8 @@ export const Food = () => {
 						</Col>
 					))}
 				</Row>
+				<br />
+				<br />
 			</CardGroup>
 			<Button variant="danger" as={Link} to="/">
 				Go Back

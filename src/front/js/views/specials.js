@@ -16,9 +16,10 @@ export const Specials = () => {
 
 	return (
 		<div className="container">
+			<h2>Specials</h2>
 			<CardGroup>
 				<Row>
-					{store.products.map((item, index) => (
+					{store.foods.specials.map((item, index) => (
 						<Col xs={12} sm={6} key={index} className="mb-4">
 							<Card className="h-100">
 								<Link to={`/product/${index}`}>
