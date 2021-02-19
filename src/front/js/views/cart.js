@@ -35,6 +35,16 @@ export const Cart = () => {
 		setCart(tempCart);
 	};
 
+	const handleDelete = item => {
+		cart.splice(0, 1);
+	};
+	const handleQtyChange = (newQty, index) => {
+		let tempCart = cart;
+		tempCart[index].qty = newQty;
+
+		setCart(tempCart);
+	};
+
 	return (
 		<div className="container">
 			<Row>
@@ -48,13 +58,24 @@ export const Cart = () => {
 					<ListGroup.Item key={index}>
 						<Row>
 							<Col>{item.name}</Col>
-							<Col>{item.qty}</Col>
+							<Col>
+								<input
+									type="number"
+									name="quantity"
+									min="1"
+									step="1"
+									onChange={e => handleQtyChange(e.target.value, index)}
+								/>
+							</Col>
 							<Col>${item.price}</Col>
 							<Col>${item.total}</Col>
 						</Row>
 					</ListGroup.Item>
 				))}
 			</ListGroup>
+			<Link to={`#`}>
+				<i className="fas fa-trash-alt" onClick={e => handleDelete(cart)} />
+			</Link>
 			<Button variant="danger" as={Link} to="/">
 				Go Back
 			</Button>
