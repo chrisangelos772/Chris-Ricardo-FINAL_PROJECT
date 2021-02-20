@@ -15,6 +15,7 @@ export const Food = () => {
 
 	return (
 		<div className="container">
+			<h1 className="titles">Food Menu</h1>
 			<CardGroup>
 				<Row>
 					{store.products.map((item, index) => (

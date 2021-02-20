@@ -45,7 +45,7 @@ export const Drinks = () => {
 
 	return (
 		<div className="container">
-			<h2>Specialty Drinks Menu</h2>
+			<h1 className="titles">Drinks Menu</h1>
 			<CardGroup>
 				<Row>
 					{store.drinks.specialty.map((item, index) => (
