@@ -8,10 +8,6 @@ body{
 //     box-sizing: unset;
 // }
 
-.main-logo {
-    margin-top: 40px;
-}
-
 .navbar {
     .logo{
         width: 170px;
@@ -31,21 +27,9 @@ body{
 a {
     &:hover {
         text-decoration: none;
-        color: #C51016;
+        color: red;
         svg path{
-            fill: #C51016;
+            fill: red;
         }
     }
-}
-
-.titles{
-    color: #C51016;
-    text-align: center;
-    padding-bottom: 40px;
-
-}
-
-.btn{
-    background-color: #C51016;
-    
 }
