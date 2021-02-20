@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { CartIcon } from "./Carticon";
 import { LoginComponent } from "./loggedIn";
+import mainLogo from "../../img/main-logo.png";
 
 import { Context } from "../store/appContext";
 
@@ -15,10 +16,7 @@ export const Navbar = () => {
 				{location.pathname === "/" ? null : (
 					<Link to="/">
 						<span className="navbar-brand mb-0 h1">
-							<img
-								className="logo"
-								src="https://bcassetcdn.com/public/blog/wp-content/uploads/2019/07/18094833/the-red-cafe.png"
-							/>
+							<img className="logo" src={mainLogo} />
 						</span>
 					</Link>
 				)}
