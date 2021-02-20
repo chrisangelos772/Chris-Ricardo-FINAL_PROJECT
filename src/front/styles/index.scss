@@ -8,6 +8,10 @@ body{
 //     box-sizing: unset;
 // }
 
+.main-logo {
+    margin-top: 40px;
+}
+
 .navbar {
     .logo{
         width: 170px;
@@ -21,7 +25,7 @@ body{
 }
 
 .description {
-  white-space: pre-line;
+  white-space: normal;
 }
 
 a {
