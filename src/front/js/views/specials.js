@@ -16,7 +16,7 @@ export const Specials = () => {
 
 	return (
 		<div className="container">
-			<h2>Specials</h2>
+			<h1 className="titles">Specials Menu</h1>
 			<CardGroup>
 				<Row>
 					{store.foods.specials.map((item, index) => (

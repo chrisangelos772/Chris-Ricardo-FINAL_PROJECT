@@ -31,9 +31,21 @@ body{
 a {
     &:hover {
         text-decoration: none;
-        color: red;
+        color: #C51016;
         svg path{
-            fill: red;
+            fill: #C51016;
         }
     }
+}
+
+.titles{
+    color: #C51016;
+    text-align: center;
+    padding-bottom: 40px;
+
+}
+
+.btn{
+    background-color: #C51016;
+    
 }
