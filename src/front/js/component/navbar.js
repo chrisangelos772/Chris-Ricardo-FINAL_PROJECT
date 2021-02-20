@@ -25,7 +25,7 @@ export const Navbar = () => {
 				<LoginComponent />
 				{/* IT SHOULD BE LINKED TO THE CART VIEW */}
 				<Link to="/Cart">
-					<CartIcon value={store.cart.length} />
+					<CartIcon value={actions.getCartQty()} />
 				</Link>
 			</nav>
 		</div>
