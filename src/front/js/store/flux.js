@@ -183,10 +183,41 @@ const getState = ({ getStore, getActions, setStore }) => {
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
+			getCartQty: () => {
+				const store = getStore();
+				let total = 0;
+
+				for (let i = 0; i < store.cart.length; i++) {
+					total += Number(store.cart[i].qty);
+				}
+
+				return total;
+			},
+			updateCart: newCart => {
+				const store = getStore();
+				setStore({
+					...store,
+					cart: newCart
+				});
+			},
 			addToCart: item => {
 				const store = getStore();
-				const cart = store.cart.push(item);
-				setStore(store);
+				// when we create this variable, we inherit the value from the store.cart,
+				// but we use Set() to make it unique (no duplicate values)
+				let cart = [...new Set(store.cart)];
+				let index = cart.indexOf(item);
+
+				if (index === -1) {
+					item.qty = 1;
+					cart.push(item);
+				} else {
+					cart[index].qty++;
+				}
+
+				setStore({
+					...store,
+					cart: cart
+				});
 			},
 
 			loadSomeData: () => {
