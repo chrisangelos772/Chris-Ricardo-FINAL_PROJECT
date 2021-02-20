@@ -15,6 +15,7 @@ import { Reservation } from "./views/reservation";
 import { ContactUs } from "./views/contactus";
 import { Cart } from "./views/cart";
 import { Specials } from "./views/specials";
+import { Account } from "./views/account";
 
 //create your first component
 const Layout = () => {
@@ -52,8 +53,8 @@ const Layout = () => {
 						<Route exact path="/cart">
 							<Cart />
 						</Route>
-						<Route>
-							<h1>Welcome to the Red Cafe</h1>
+						<Route exact path="/account">
+							<Account />
 						</Route>
 					</Switch>
 					<Footer />

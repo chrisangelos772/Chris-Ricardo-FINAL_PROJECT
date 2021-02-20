@@ -19,7 +19,7 @@ export const Food = () => {
 			<CardGroup>
 				<Row>
 					{store.products.map((item, index) => (
-						<Col xs={12} sm={6} key={index} className="mb-4">
+						<Col xs={12} sm={3} key={index} className="mb-4">
 							<Card className="h-100">
 								<Link to={`/product/${index}`}>
 									<Card.Img variant="top" src={item.img} />
@@ -44,8 +44,6 @@ export const Food = () => {
 						</Col>
 					))}
 				</Row>
-				<br />
-				<br />
 			</CardGroup>
 			<Button variant="danger" as={Link} to="/">
 				Go Back
