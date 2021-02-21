@@ -82,7 +82,7 @@ export const Cart = () => {
 	return (
 		<div className="container">
 			<Row>
-				<Col>Name</Col>
+				<Col>Name!</Col>
 				<Col>Qty</Col>
 				<Col>Price Per</Col>
 				<Col>Total</Col>
