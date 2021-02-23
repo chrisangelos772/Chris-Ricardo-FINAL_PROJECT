@@ -12,7 +12,7 @@ export const Footer = () => (
 			and{" "}
 			<a style={{ color: "#C51016" }} href="https://topnotchmarketingsolutionsllc.com/">
 				{" "}
-				Chris angelos
+				Chris Angelos
 			</a>
 		</p>
 	</footer>
