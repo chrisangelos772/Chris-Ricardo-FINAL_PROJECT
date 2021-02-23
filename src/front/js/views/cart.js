@@ -157,9 +157,9 @@ export const Cart = () => {
 			</ListGroup>
 			<br />
 			<br />
-			<Button variant="danger" as={Link} to="/">
-				Go Back
-			</Button>
+			<Link to="/">
+				<button>Go back</button>
+			</Link>
 		</div>
 	);
 };

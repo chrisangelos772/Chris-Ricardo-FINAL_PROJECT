@@ -19,7 +19,7 @@ export const Food = () => {
 			<CardGroup>
 				<Row>
 					{store.products.map((item, index) => (
-						<Col xs={12} sm={3} key={index} className="mb-4">
+						<Col xs={12} sm={4} key={index} className="mb-4">
 							<Card className="h-100">
 								<Link to={`/product/${index}`}>
 									<Card.Img variant="top" src={item.img} />
@@ -34,9 +34,7 @@ export const Food = () => {
 											<medium className="text-muted">${item.price}</medium>
 										</Col>
 										<Col>
-											<button className="btn btn-danger" onClick={e => actions.addToCart(item)}>
-												Add to cart
-											</button>{" "}
+											<button onClick={e => actions.addToCart(item)}>Add to cart</button>{" "}
 										</Col>
 									</Row>
 								</Card.Footer>
@@ -45,9 +43,9 @@ export const Food = () => {
 					))}
 				</Row>
 			</CardGroup>
-			<Button variant="danger" as={Link} to="/">
-				Go Back
-			</Button>
+			<Link to="/">
+				<button>Go back</button>
+			</Link>
 		</div>
 	);
 };

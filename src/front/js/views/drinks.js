@@ -33,9 +33,7 @@ export const Drinks = () => {
 					</Row>
 					<Row>
 						<Col>
-							<button className="btn btn-danger" onClick={e => actions.addToCart(item)}>
-								Add to cart
-							</button>{" "}
+							<button onClick={e => actions.addToCart(item)}>Add to cart</button>{" "}
 						</Col>
 					</Row>
 				</Col>
@@ -64,9 +62,7 @@ export const Drinks = () => {
 											<medium className="text-muted">${item.price}</medium>
 										</Col>
 										<Col>
-											<button className="btn btn-danger" onClick={e => actions.addToCart(item)}>
-												Add to cart
-											</button>{" "}
+											<button onClick={e => actions.addToCart(item)}>Add to cart</button>{" "}
 											{/* <Link to="#">
 												<FontAwesomeIcon
 													icon={faCartPlus}
@@ -93,9 +89,9 @@ export const Drinks = () => {
 			<ListGroup>{store.drinks.wine.map((item, index) => createListItems(item, index))}</ListGroup>
 			<br />
 			<br />
-			<Button variant="danger" as={Link} to="/">
-				Go Back
-			</Button>
+			<Link to="/">
+				<button>Go back</button>
+			</Link>
 		</div>
 	);
 };

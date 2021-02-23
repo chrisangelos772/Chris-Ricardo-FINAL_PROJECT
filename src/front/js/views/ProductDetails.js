@@ -15,7 +15,7 @@ export const ProductDetails = () => {
 			<h2>{store.products[params.productID].name}</h2>
 			<br />
 			<Link to="/">
-				<button className="btn btn-primary">Back home</button>
+				<button>Go back</button>
 			</Link>
 		</div>
 	);

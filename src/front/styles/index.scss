@@ -1,7 +1,7 @@
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    
-    //  color: #C51016;     
+    font-family: "Trebuchet MS", sans-serif;
+  width: 100vw;
+  height: 100vh;
 }
 
 // *,::before,::after{
@@ -9,9 +9,12 @@ body{
 // }
 
 .navbar {
+    color: black;
+    
     .logo{
-        width: 170px;
-        height: 170px;
+        width: 300px;
+        height: 300px;
+
        
     }
 }
@@ -27,9 +30,40 @@ body{
 a {
     &:hover {
         text-decoration: none;
-        color: red;
+        color: #C51016;
         svg path{
-            fill: red;
+            fill: #C51016;
         }
     }
+}
+
+
+// .dropdown{
+//      background-color: #C51016;
+// }
+
+.titles{
+    color: #C51016;
+    text-align: center;
+    padding-bottom: 40px;
+    margin-top: -30px;
+    font-family: "Trebuchet MS", sans-serif;
+   font-size: 65px;
+   letter-spacing: -2px;
+   border-bottom: 2px solid black;
+   text-transform: uppercase;
+}
+
+
+.login{
+    color: #C51016;
+    font-size: 25px;
+    
+}
+.icon{
+    color: black;
+    font-size: 25px;
+}
+.fas{
+    color: #C51016;
 }

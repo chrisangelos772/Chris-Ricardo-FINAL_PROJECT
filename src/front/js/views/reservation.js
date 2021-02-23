@@ -39,12 +39,10 @@ export const Reservation = () => (
 				</Col>
 			</Form.Row>
 			<div className="res-buttons row">
-				<Button variant="danger">Submit</Button>
-				<Button variant="danger" as={Link} to="/">
-					Go Back
-				</Button>
-				{/* <input className="mainlabel col-4" type="" id="r1" value="Submit" />
-				<input className="mainlabel col-4" type="" id="r2" value="Go Back" /> */}
+				<button>Submit</button>
+				<Link to="/">
+					<button>Go back</button>
+				</Link>
 			</div>
 		</Form>
 	</div>

@@ -9,7 +9,7 @@ export const CartIcon = props => {
 	const { value } = props;
 	return (
 		<div>
-			<FontAwesomeIcon icon={faShoppingCart} />
+			<FontAwesomeIcon className="icon" icon={faShoppingCart} />
 			<Badge variant="danger">{value}</Badge>
 		</div>
 	);
