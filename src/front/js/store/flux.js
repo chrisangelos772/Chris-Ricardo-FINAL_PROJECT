@@ -10,7 +10,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					size: "Plate",
 					img: "https://images.pitboss-grills.com/catalog/recipes/1200px/IMG_0488.jpg",
 					description:
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et"
+						"Chicken, Beef or Vegan Quesadilla's. With your choice of pepperjack, monterey, cheddar or smoked gouda cheese, green peppers and red peppers, and black beans.            served with sour cream, salsa and guacamole, you cannot go wrong with these!"
 				},
 				{
 					name: "Ultimate Nachos",
@@ -18,7 +18,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					size: "plate",
 					img: "https://www.nowfindglutenfree.com/wp-content/uploads/sites/2/2016/02/nachos.gif",
 					description:
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et"
+						"Stacked with ground beef (chicken on request), black beans, purple onions, green peppers, red peppers, and yellow peppers, corn, smothered in melted Smoked Gouda and shredded cheddar cheese, black olives, jalapeno's, sour cream, Guac, and salsa. This truely is a MONSTER of an appetizer."
 				},
 				{
 					name: "Bang Bang Shrimp",
@@ -26,7 +26,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					size: "plate",
 					img: "https://www.afamilyfeast.com/wp-content/uploads/2017/04/Bang-Bang-Shrimp3.jpg",
 					description:
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et"
+						"Sweet and spicy fried shrimp tossed in our homemade bang bang sauce! Served over a bed of lettuce. These baby's have a kick, be prepared."
 				},
 				{
 					name: "Shrimp Avocado Bites",

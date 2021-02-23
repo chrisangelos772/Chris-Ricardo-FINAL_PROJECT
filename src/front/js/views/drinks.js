@@ -49,9 +49,9 @@ export const Drinks = () => {
 					{store.drinks.specialty.map((item, index) => (
 						<Col xs={12} sm={6} md={4} key={index} className="mb-4">
 							<Card className="h-100">
-								<Link to={`/product/${index}`}>
-									<Card.Img variant="top" src={item.img} />
-								</Link>
+								{/* <Link to={`/product/${index}`}> */}
+								<Card.Img variant="top" src={item.img} />
+								{/* </Link> */}
 								<Card.Body className="h-100">
 									<Card.Title>{item.name}</Card.Title>
 									<Card.Text className="description">{item.description}</Card.Text>
