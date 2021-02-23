@@ -1,11 +1,12 @@
 import React from "react";
-import mainLogo from "../../img/main-logo.gif";
+import mainLogo from "../../img/main-logo.png";
 import "../../styles/home.scss";
 import "../../styles/buttons.scss";
 import { Link } from "react-router-dom";
 import { Footer } from "../component/footer";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import "../../styles/animations.scss";
 
 export const Home = () => (
 	<div className="text-center mt-5">
@@ -21,7 +22,7 @@ export const Home = () => (
 		<Row>
 			<Col>
 				<Link to="/drinks">
-					<button className="but-home">Drinks Menu!</button>
+					<button className="but-home">Drinks Menu</button>
 				</Link>
 			</Col>
 		</Row>

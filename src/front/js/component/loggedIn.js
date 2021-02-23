@@ -37,13 +37,18 @@ export const LoginComponent = () => {
 						</Dropdown.Menu>
 					</Dropdown>
 				) : (
-					<Link to="#" className="login" onClick={handleShow}>
-						Login
-					</Link>
+					<div className="links">
+						<Link to="#" className="login" onClick={handleShow}>
+							Sign Up
+						</Link>
+						<Link to="#" className="login" onClick={handleShow}>
+							Sign In
+						</Link>
+					</div>
 				)}
 				<Modal show={show} onHide={handleClose}>
 					<Modal.Header closeButton>
-						<Modal.Title>Create an account</Modal.Title>
+						<Modal.Title>Create an Account</Modal.Title>
 					</Modal.Header>
 					<Form onSubmit={e => e.preventDefault()}>
 						<Modal.Body>
