@@ -21,7 +21,7 @@ export const Home = () => (
 		<Row>
 			<Col>
 				<Link to="/drinks">
-					<button className="but-home">Drinks Menu</button>
+					<button className="but-home">Drinks Menu!</button>
 				</Link>
 			</Col>
 		</Row>
