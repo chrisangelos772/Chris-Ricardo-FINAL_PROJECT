@@ -35,9 +35,7 @@ export const Specials = () => {
 											<medium className="text-muted">${item.price}</medium>
 										</Col>
 										<Col>
-											<button className="btn btn-danger" onClick={e => actions.addToCart(item)}>
-												Add to cart
-											</button>{" "}
+											<button onClick={e => actions.addToCart(item)}>Add to cart</button>{" "}
 										</Col>
 									</Row>
 								</Card.Footer>
@@ -46,9 +44,9 @@ export const Specials = () => {
 					))}
 				</Row>
 			</CardGroup>
-			<Button variant="danger" as={Link} to="/">
-				Go Back
-			</Button>
+			<Link to="/">
+				<button>Go back</button>
+			</Link>
 		</div>
 	);
 };

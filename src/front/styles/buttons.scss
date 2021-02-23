@@ -3,45 +3,133 @@ $color-light: #C51016;
 $bg-size-end: 2;
 $dur: 0.5s;
 
-.buttons{
-position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-    width: 400px;
-    height: 400px;
-    margin-top: 200px;
-}
-
-.mainbutton[type=checkbox] {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-   display: grid;
-}
-
-.mainlabel {    
-  outline: none;
-  user-select: none;
-  color: $color-dark;
-font-size:25px;
-  letter-spacing: 0.04rem;
-  cursor: pointer;
-  border: black solid 0.6px;
-  border-radius: .8rem;
-     text-align: center;
-  background: $color-light;
-  position: relative;
-  overflow: hidden;
-  width: 250px;
+.btn {
+    background: #C51016;
+  color: white;
+  margin: 15px;
+  width: 60px;
   height: 40px;
--webkit-box-shadow: 0 10px 6px -6px #777;
-     -moz-box-shadow: 0 10px 6px -6px #777;
-          box-shadow: 0 10px 6px -6px #777;
-  &:active {
-    top: 3px;
-    box-shadow: none;
+  border: 0;
+  font-size: 20px;
+  border-radius: 4px;
+  font-family:Arial, Helvetica, sans-serif;
+  transition: .6s;
+  overflow: hidden;
+  &:focus{
+    outline: 0;
+  }
+  &:hover{
+    background: black;
+    cursor: pointer;
+    &:before{
+      transform: translateX(300px)  skewX(-15deg);  
+      opacity: 0.6;
+      transition: .7s;
+    }
+    &:after{
+      transform: translateX(300px) skewX(-15deg);  
+      opacity: 1;
+      transition: .7s;
+    }
+  }
+
+}
+
+button{
+    
+  background: #C51016;;
+  color: white;
+  margin: 15px;
+  width: 110px;
+  height: 30px;
+  border: 0;
+  font-size: 15px;
+  border-radius: 4px;
+
+  font-family: 'Raleway', sans-serif;
+  transition: .6s;
+  overflow: hidden;
+  &:focus{
+    outline: 0;
+  }
+  &:hover{
+    background: black;
+    cursor: pointer;
+    &:before{
+      transform: translateX(300px)  skewX(-15deg);  
+      opacity: 0.6;
+      transition: .7s;
+    }
+    &:after{
+      transform: translateX(300px) skewX(-15deg);  
+      opacity: 1;
+      transition: .7s;
+    }
   }
 }
+
+
+.but-home{
+    background: #C51016;
+  color: white;
+  margin: 15px;
+  width: 230px;
+  height: 60px;
+  border: 0;
+  font-size: 22px;
+  border-radius: 4px;
+  font-family: 'Raleway', sans-serif;
+  transition: .6s;
+  overflow: hidden;
+  &:focus{
+    outline: 0;
+  }
+  &:hover{
+    background: black;
+    cursor: pointer;
+    &:before{
+      transform: translateX(300px)  skewX(-15deg);  
+      opacity: 0.6;
+      transition: .7s;
+    }
+    &:after{
+      transform: translateX(300px) skewX(-15deg);  
+      opacity: 1;
+      transition: .7s;
+    }
+  }
+}
+
+
+// .mainbutton[type=checkbox] {
+//   height: 0;
+//   width: 0;
+//   visibility: hidden;
+//    display: grid;
+// }
+
+// .mainlabel {    
+//   outline: none;
+//   user-select: none;
+//   color: $color-dark;
+// font-size:25px;
+//   letter-spacing: 0.04rem;
+//   cursor: pointer;
+//   border: black solid 0.6px;
+//   border-radius: .8rem;
+//      text-align: center;
+//   background: $color-light;
+//   position: relative;
+//   overflow: hidden;
+//   width: 250px;
+//   height: 40px;
+// -webkit-box-shadow: 0 10px 6px -6px #777;
+//      -moz-box-shadow: 0 10px 6px -6px #777;
+//           box-shadow: 0 10px 6px -6px #777;
+//   &:active {
+//     top: 3px;
+//     box-shadow: none;
+//   }
+// }
 
 

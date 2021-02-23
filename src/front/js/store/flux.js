@@ -195,6 +195,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 					}
 				]
 			},
+			//     account:[
+			//         {
+			//             user_id:"12345",
+			//             name:"hello hello",
+			//             points:"360 pts.",
+			//             number_orders:"12"
+
+			//         },
+			//     ]
+
+			// }
 			cart: [],
 			demo: [
 				{

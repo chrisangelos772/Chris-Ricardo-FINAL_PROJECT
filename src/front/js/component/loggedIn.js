@@ -19,7 +19,11 @@ export const LoginComponent = () => {
 			<div className="login ml-auto mr-3">
 				{loggedIn ? (
 					<Dropdown>
-						<Dropdown.Toggle variant="danger" id="dropdown-basic">
+						<Dropdown.Toggle
+							bsClass="custom-class"
+							className="dropdown"
+							variant="danger"
+							id="dropdown-basic">
 							<FontAwesomeIcon icon={faUserCircle} />
 						</Dropdown.Toggle>
 
@@ -28,13 +32,13 @@ export const LoginComponent = () => {
 								Account
 							</Dropdown.Item>
 							<Dropdown.Item href="#" onClick={() => setLoggedIn(!loggedIn)}>
-								logout
+								Logout
 							</Dropdown.Item>
 						</Dropdown.Menu>
 					</Dropdown>
 				) : (
-					<Link to="#" onClick={handleShow}>
-						login
+					<Link to="#" className="login" onClick={handleShow}>
+						Login
 					</Link>
 				)}
 				<Modal show={show} onHide={handleClose}>

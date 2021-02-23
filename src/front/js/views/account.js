@@ -15,7 +15,7 @@ import FormLabel from "react-bootstrap/FormLabel";
 import Table from "react-bootstrap/Table";
 
 export const Account = () => (
-	<div className="account">
+	<div className="account container">
 		<h1 className="title2">Account Information</h1>
 		<div className="container table">
 			<Table responsive="sm" striped>
@@ -34,5 +34,8 @@ export const Account = () => (
 				</tr>
 			</Table>
 		</div>
+		<Link to="/">
+			<button>Go back</button>
+		</Link>
 	</div>
 );

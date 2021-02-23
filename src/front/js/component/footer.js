@@ -6,8 +6,14 @@ export const Footer = () => (
 		<br />
 		<p>
 			Made with the power of <i className="fas fa-coffee" /> by{" "}
-			<a href="http://www.4geeksacademy.com">Ricardo Javier</a> and{" "}
-			<a href="https://topnotchmarketingsolutionsllc.com/"> Chris angelos</a>
+			<a style={{ color: "#C51016" }} href="https://www.linkedin.com/in/rsalinaszambrano">
+				Ricardo Javier
+			</a>{" "}
+			and{" "}
+			<a style={{ color: "#C51016" }} href="https://topnotchmarketingsolutionsllc.com/">
+				{" "}
+				Chris angelos
+			</a>
 		</p>
 	</footer>
 );

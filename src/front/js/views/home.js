@@ -4,44 +4,47 @@ import "../../styles/home.scss";
 import "../../styles/buttons.scss";
 import { Link } from "react-router-dom";
 import { Footer } from "../component/footer";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 export const Home = () => (
 	<div className="text-center mt-5">
 		<img className="main-logo" src={mainLogo} />
-		<div className="buttons">
-			<div className="buttons1">
+		{/* <div className="buttons"> */}
+		<Row>
+			<Col>
 				<Link to="/food">
-					<input className="mainbutton" type="checkbox" id="cb1" />
-					<label className="mainlabel" htmlFor="cb1">
-						Food Menu
-					</label>
+					<button className="but-home">Food Menu</button>
 				</Link>
+			</Col>
+		</Row>
+		<Row>
+			<Col>
 				<Link to="/drinks">
-					<input className="mainbutton" type="checkbox" id="cb2" />
-					<label className="mainlabel" htmlFor="cb2">
-						Drinks Menu
-					</label>
+					<button className="but-home">Drinks Menu</button>
 				</Link>
-
+			</Col>
+		</Row>
+		<Row>
+			<Col>
 				<Link to="/specials">
-					<input className="mainbutton" type="checkbox" id="cb3" />
-					<label className="mainlabel" htmlFor="cb3">
-						Specials Menu
-					</label>
+					<button className="but-home">Specials Menu</button>
 				</Link>
-			</div>
-			<Link to="/reservation">
-				<input className="mainbutton" type="checkbox" id="cb4" />
-				<label className="mainlabel" htmlFor="cb4">
-					Reservation
-				</label>
-			</Link>
-			<Link to="/contactus">
-				<input className="mainbutton" type="checkbox" id="cb5" />
-				<label className="mainlabel" htmlFor="cb5">
-					Contact us
-				</label>
-			</Link>
-		</div>
+			</Col>
+		</Row>
+		<Row>
+			<Col>
+				<Link to="/reservation">
+					<button className="but-home">Reservation</button>
+				</Link>
+			</Col>
+		</Row>
+		<Row>
+			<Col>
+				<Link to="/contactus">
+					<button className="but-home">Contact Us</button>
+				</Link>
+			</Col>
+		</Row>
 	</div>
 );
