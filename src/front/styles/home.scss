@@ -12,8 +12,8 @@
  .main-logo{
  width: 500px;
   height: 500px;
+  margin-top: -130px;
     margin-left: 25px;
-    margin-top: -150px;
     margin-bottom: -100px;
  }
 
@@ -31,5 +31,11 @@
     border: none;
 }
 
+.dropdown-item{
+color: #C51016;
+font-size: 20px;
+}
 
-
+.dropdown-item:focus{
+    background-color: black;
+}

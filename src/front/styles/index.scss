@@ -9,14 +9,22 @@ body{
 // }
 
 .navbar {
-    color: black;
-    
+//    position: fixed;
+//    right: 15%;
+   top:30px; 
+    color: black;    
     .logo{
         width: 300px;
-        height: 300px;
+        height: 300px;      
 
        
     }
+}
+
+.header{
+        color: #C51016;
+    font-size: 20px;
+    margin:40px;
 }
 
 .footer{
@@ -55,11 +63,6 @@ a {
 }
 
 
-.login{
-    color: #C51016;
-    font-size: 25px;
-    
-}
 .icon{
     color: black;
     font-size: 25px;
