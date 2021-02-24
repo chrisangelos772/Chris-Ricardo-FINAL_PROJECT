@@ -1,6 +1,7 @@
 import { Specials } from "../views/specials";
 
 const getState = ({ getStore, getActions, setStore }) => {
+	const baseUrl = "https://thedoordrop.herokuapp.com/api";
 	return {
 		store: {
 			products: [
@@ -179,15 +180,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			],
-
-			account: [
-				{
-					user_id: "123456",
-					name: "Customer Name",
-					points: "400 pts",
-					orders: "12"
-				}
-			]
+			loggedIn: false,
+			token: "",
+			account: {
+				id: "123456",
+				first_name: "Customer",
+				last_name: "Customer",
+				email: "",
+				city: "",
+				state: "",
+				zip_code: "",
+				phone: "",
+				rewards_pts: "400",
+				orders: []
+			}
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -231,10 +237,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 				});
 			},
 
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
+			signUp: data => {
+				return fetch(`${baseUrl}/register/`, {
+					method: "POST",
+					body: JSON.stringify(data)
+				})
+					.then(res => res.json())
+					.then(data => true);
+			},
+			signIn: data => {
+				return fetch(`${baseUrl}/login/`, {
+					method: "POST",
+					body: JSON.stringify(data)
+				})
+					.then(res => res.json())
+					.then(data =>
+						setStore({
+							loggedIn: true,
+							token: data.token,
+							user: data.user
+						})
+					);
 			},
 			changeColor: (index, color) => {
 				//get the store
