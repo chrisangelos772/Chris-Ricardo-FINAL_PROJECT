@@ -35,7 +35,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					img:
 						"https://www.yummyhealthyeasy.com/wp-content/uploads/2018/06/Low-Carb-Avocado-Shrimp-Cucumber-Appetizer-5.jpg",
 					description:
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et"
+						"Lightly blackened shrimp placed on top of our homemade Guacamole on top of a freshly sliced cucumber. Combining the spice of the grilled shrimp with the clean flavor of the guacamole and cucumber, you get a sublime flavor that tantalizes your taste buds."
 				},
 				{
 					name: "Tomato Bisque",
@@ -43,7 +43,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					size: "cup",
 					img: "https://yupitsvegan.com/wp-content/uploads/2019/12/vegan-tomato-soup-3.jpg",
 					description:
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et"
+						"Fresh, homemade tomato bisque soup topped with basil leaves and paired with a grilled cheese. This soup will leave you warm and satisfied."
 				},
 				{
 					name: "Chicken Ceasar Salad",
@@ -64,37 +64,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						img:
 							"https://cdn-prd.healthymealplans.com/recipe/e19c5315c0943362df71a3c84b466f59-Shrimp-Scampi-Pasta-Alt_16x9_1200_Healthy-Meal-Plans.jpg",
 						description:
-							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et"
-					},
-
-					{
-						name: "Shrimp Scampi",
-						price: 17.95,
-						size: "Plate",
-						img:
-							"https://cdn-prd.healthymealplans.com/recipe/e19c5315c0943362df71a3c84b466f59-Shrimp-Scampi-Pasta-Alt_16x9_1200_Healthy-Meal-Plans.jpg",
-						description:
-							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et"
-					},
-
-					{
-						name: "Shrimp Scampi",
-						price: 17.95,
-						size: "Plate",
-						img:
-							"https://cdn-prd.healthymealplans.com/recipe/e19c5315c0943362df71a3c84b466f59-Shrimp-Scampi-Pasta-Alt_16x9_1200_Healthy-Meal-Plans.jpg",
-						description:
-							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et"
-					},
-
-					{
-						name: "Shrimp Scampi",
-						price: 17.95,
-						size: "Plate",
-						img:
-							"https://cdn-prd.healthymealplans.com/recipe/e19c5315c0943362df71a3c84b466f59-Shrimp-Scampi-Pasta-Alt_16x9_1200_Healthy-Meal-Plans.jpg",
-						description:
-							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et"
+							"Shrimp sautéed in a garlic butter sauce, tossed with asparagus, tomatoes, and angel hair pasta.this dinner will have you feeling as if you're in the Cinque Terre, Italy. Best paired with a White Wine."
 					}
 				]
 			},
@@ -106,7 +76,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						size: "12 oz",
 						img: "https://www.veganricha.com/wp-content/uploads/2016/06/mango-mojito-5081.jpg",
 						description:
-							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et"
+							"Deliciously refreshing, our Mango Mojito's are made with only the freshest of mangos, hand juiced and muddled, goes well on a hot summer day."
 					},
 					{
 						name: "Smoked Old Fashioned",
@@ -114,7 +84,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						size: "10 oz",
 						img: "https://www.acouplecooks.com/wp-content/uploads/2020/06/Smoked-Old-Fashioned-008.jpg",
 						description:
-							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et"
+							"Made with Bourbon or rye whiskey, Sugar cube, Water, Angostura bitters, Orange peel and cocktail cherry garnish with a smokey effect for appeal as well as added flavor, our old fashioned is one for the books."
 					},
 					{
 						name: "Blackberry Moscow Mule",
@@ -123,7 +93,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						img:
 							"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/moscow-mule-alcoholic-drink-moscow-mule-cocktail-royalty-free-image-922744264-1564688972.jpg?crop=0.668xw:1.00xh;0.0689xw,0&resize=640:*",
 						description:
-							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et"
+							"Made with fresh Blackberries, Mint, Lime Juice, Vodka, all shaken together, poured into a copper cup over ice and added ginger beer at the end, this moscow mule will have you wanting more!"
 					}
 				],
 				beer: [
