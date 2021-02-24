@@ -27,7 +27,6 @@ def register():
     state = request.json.get("state", None)
     zip_code = request.json.get("zip_code", None)
     phone = request.json.get("phone", None)
-    rewards_pts = request.json.get("rewards_pts", None)
 
     if not email:
         return jsonify({"msg": "Email is required"}), 400
@@ -45,16 +44,16 @@ def register():
         return jsonify({"msg": "zip_code is required"}), 400
     if not phone:
         return jsonify({"msg": "phone is required"}), 400
-    if not rewards_pts:
-        return jsonify({"msg": "rewards_pts is required"}), 400
 
     user = User.query.filter_by(email=email).first()
     if user:
         return jsonify({"msg": "Username  already exists"}), 400
 
+    # make sure all fields are represented from the model when creating the user below
     user = User(
         email=email, 
-        password=generate_password_hash(password), 
+        password=generate_password_hash(password),
+        rewards_pts=0, 
         is_active=True)
     db.session.add(user)
     db.session.commit()

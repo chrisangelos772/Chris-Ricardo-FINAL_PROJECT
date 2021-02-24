@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
@@ -8,9 +8,19 @@ import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import Dropdown from "react-bootstrap/Dropdown";
 import "../../styles/modals.scss";
 import "../../styles/home.scss";
+import { Context } from "../store/appContext";
 
 export const LoginComponent = () => {
-	const [loggedIn, setLoggedIn] = useState(true);
+	const { store, actions } = useContext(Context);
+	const { loggedIn } = store;
+
+	const [firstName, setFirstName] = useState("");
+	const [lastName, setLastName] = useState("");
+	const [email, setEmail] = useState("");
+	const [city, setCity] = useState("");
+	const [state, setState] = useState("");
+	const [zip, setZip] = useState("");
+	const [phone, setPhone] = useState("");
 
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
@@ -19,6 +29,68 @@ export const LoginComponent = () => {
 	const [showb, setShowb] = useState(false);
 	const handleCloseb = () => setShowb(false);
 	const handleShowb = () => setShowb(true);
+
+	const [loginEmail, setLoginEmail] = useState("");
+	const [loginPassword, setLoginPassword] = useState("");
+
+	const handleSignUp = async () => {
+		// email = request.json.get("email", None)
+		// password = request.json.get("password", None)
+		// first_name = request.json.get("first_name", None)
+		// last_name = request.json.get("last_name", None)
+		// city = request.json.get("city", None)
+		// state = request.json.get("state", None)
+		// zip_code = request.json.get("zip_code", None)
+		// phone = request.json.get("phone", None)
+		// rewards_pts = request.json.get("rewards_pts", None)
+		let data = {
+			email: email,
+			first_name: firstName,
+			last_name: lastName,
+			city: city,
+			state: state,
+			zip_code: zip,
+			phone: phone,
+			password: password
+		};
+
+		try {
+			let signup = await actions.signUp(data);
+
+			if (signup) {
+				clearState();
+
+				setShow(false); // hide the signup
+				setShowb(true); // show the login
+			}
+		} catch (e) {
+			console.error(e);
+		}
+	};
+
+	const handleLogin = async () => {
+		let loginData = {
+			email: loginEmail,
+			password: loginPassword
+		};
+		try {
+			let login = await actions.signIn(loginData);
+
+			if (login) {
+				clearState();
+				setShowb(false); // hide the login
+			}
+		} catch (e) {
+			console.error(e);
+		}
+	};
+
+	const clearState = () => {
+		// reset state variables
+		setFirstName("");
+		setLoginEmail("");
+		setLoginPassword("");
+	};
 
 	return (
 		<>
@@ -60,12 +132,20 @@ export const LoginComponent = () => {
 					<Form onSubmit={e => e.preventDefault()}>
 						<Modal.Body>
 							<Form.Group controlId="formBasicName">
-								<Form.Label>Name</Form.Label>
-								<Form.Control type="name" />
+								<Form.Label>First Name</Form.Label>
+								<Form.Control
+									type="name"
+									value={firstName}
+									onChange={e => setFirstName(e.target.value)}
+								/>
 							</Form.Group>
 							<Form.Group controlId="formBasicLastName">
 								<Form.Label>Last Name</Form.Label>
-								<Form.Control type="last-name" />
+								<Form.Control
+									type="last-name"
+									value={lastName}
+									onChange={e => setLastName(e.target.value)}
+								/>
 							</Form.Group>
 							<Form.Group controlId="formBasicPhone">
 								<Form.Label>Phone Number</Form.Label>
@@ -73,6 +153,18 @@ export const LoginComponent = () => {
 							</Form.Group>
 							<Form.Group controlId="formBasicEmail">
 								<Form.Label>Email address</Form.Label>
+								<Form.Control type="email" />
+							</Form.Group>
+							<Form.Group controlId="formBasicEmail">
+								<Form.Label>City</Form.Label>
+								<Form.Control type="email" />
+							</Form.Group>
+							<Form.Group controlId="formBasicEmail">
+								<Form.Label>State</Form.Label>
+								<Form.Control type="email" />
+							</Form.Group>
+							<Form.Group controlId="formBasicEmail">
+								<Form.Label>Zip Code</Form.Label>
 								<Form.Control type="email" />
 							</Form.Group>
 
@@ -91,8 +183,8 @@ export const LoginComponent = () => {
 							<Button className="button-modal" onClick={handleClose}>
 								Close
 							</Button>
-							<Button className="button-modal" onClick={handleClose}>
-								Save Changes
+							<Button className="button-modal" onClick={handleSignUp}>
+								Sign up!
 							</Button>
 						</Modal.Footer>
 					</Form>
