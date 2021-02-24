@@ -14,7 +14,7 @@ export const Food = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container">
+		<div className="container menu">
 			<h1 className="titles">Food Menu</h1>
 			<CardGroup>
 				<Row>

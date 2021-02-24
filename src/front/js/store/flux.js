@@ -208,20 +208,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
+			],
+
+			account: [
+				{
+					user_id: "123456",
+					name: "Customer Name",
+					points: "400 pts",
+					orders: "12"
+				}
 			]
 		},
-
-		//  account:[
-		// 	    {
-		// 	            user_id:"12345",
-		// 	            name:"hello hello",
-		// 	            points:"360 pts.",
-		// 	            number_orders:"12"
-
-		//         }
-		//  ]
-
-		// },
 		actions: {
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
