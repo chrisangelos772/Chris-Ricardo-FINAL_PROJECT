@@ -6,6 +6,8 @@ import Form from "react-bootstrap/Form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import Dropdown from "react-bootstrap/Dropdown";
+import "../../styles/modals.scss";
+import "../../styles/home.scss";
 
 export const LoginComponent = () => {
 	const [loggedIn, setLoggedIn] = useState(true);
@@ -24,7 +26,7 @@ export const LoginComponent = () => {
 				{loggedIn ? (
 					<Dropdown>
 						<Dropdown.Toggle
-							bsClass="custom-class"
+							bsclass="custom-class"
 							className="dropdown"
 							variant="danger"
 							id="dropdown-basic">
@@ -35,7 +37,9 @@ export const LoginComponent = () => {
 								Account
 							</Dropdown.Item>
 							<Dropdown.Item href="#" onClick={() => setLoggedIn(!loggedIn)}>
-								Logout
+								<Link className="dropdown-item" to="/">
+									Logout
+								</Link>
 							</Dropdown.Item>
 						</Dropdown.Menu>
 					</Dropdown>
@@ -57,24 +61,24 @@ export const LoginComponent = () => {
 						<Modal.Body>
 							<Form.Group controlId="formBasicName">
 								<Form.Label>Name</Form.Label>
-								<Form.Control type="name" placeholder="Name" />
+								<Form.Control type="name" />
 							</Form.Group>
 							<Form.Group controlId="formBasicLastName">
 								<Form.Label>Last Name</Form.Label>
-								<Form.Control type="last-name" placeholder="Last Name" />
+								<Form.Control type="last-name" />
 							</Form.Group>
 							<Form.Group controlId="formBasicPhone">
 								<Form.Label>Phone Number</Form.Label>
-								<Form.Control type="phone" placeholder="Phone Number" />
+								<Form.Control type="phone" />
 							</Form.Group>
 							<Form.Group controlId="formBasicEmail">
 								<Form.Label>Email address</Form.Label>
-								<Form.Control type="email" placeholder="Enter email" />
+								<Form.Control type="email" />
 							</Form.Group>
 
 							<Form.Group controlId="formBasicPassword">
 								<Form.Label>Password</Form.Label>
-								<Form.Control type="password" placeholder="Password" />
+								<Form.Control type="password" />
 							</Form.Group>
 							<Form.Group controlId="formBasicCheckbox">
 								<Form.Check
@@ -84,10 +88,10 @@ export const LoginComponent = () => {
 							</Form.Group>
 						</Modal.Body>
 						<Modal.Footer>
-							<Button variant="secondary" onClick={handleClose}>
+							<Button className="button-modal" onClick={handleClose}>
 								Close
 							</Button>
-							<Button variant="primary" onClick={handleClose}>
+							<Button className="button-modal" onClick={handleClose}>
 								Save Changes
 							</Button>
 						</Modal.Footer>
@@ -101,24 +105,23 @@ export const LoginComponent = () => {
 						<Modal.Body>
 							<Form.Group controlId="formBasicEmail">
 								<Form.Label>Email address</Form.Label>
-								<Form.Control type="email" placeholder="Enter email" />
+								<Form.Control type="email" />
 							</Form.Group>
 
 							<Form.Group controlId="formBasicPassword">
 								<Form.Label>Password</Form.Label>
-								<Form.Control type="password" placeholder="Password" />
-							</Form.Group>
-							<Form.Group controlId="formBasicCheckbox">
-								<Form.Check type="checkbox" label="Check me out" />
+								<Form.Control type="password" />
 							</Form.Group>
 						</Modal.Body>
 						<Modal.Footer>
-							<Button variant="secondary" onClick={handleCloseb}>
+							<Button className="button-modal" onClick={handleCloseb}>
 								Close
 							</Button>
-							<Button variant="primary" onClick={handleCloseb}>
-								Save Changes
-							</Button>
+							<Link to="/account">
+								<Button className="button-modal" onClick={handleCloseb}>
+									Enter
+								</Button>
+							</Link>
 						</Modal.Footer>
 					</Form>
 				</Modal>

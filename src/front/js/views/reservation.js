@@ -13,7 +13,7 @@ import FormGroup from "react-bootstrap/FormGroup";
 import FormLabel from "react-bootstrap/FormLabel";
 
 export const Reservation = () => (
-	<div className="res">
+	<div className="container">
 		<h1 className="title1">RESERVATION</h1>
 		<p className="text">
 			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been

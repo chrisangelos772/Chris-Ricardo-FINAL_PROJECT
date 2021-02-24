@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import mainLogo from "../../img/main-logo.png";
 import "../../styles/home.scss";
 import "../../styles/buttons.scss";
@@ -13,29 +13,38 @@ import FormControl from "react-bootstrap/FormControl";
 import FormGroup from "react-bootstrap/FormGroup";
 import FormLabel from "react-bootstrap/FormLabel";
 import Table from "react-bootstrap/Table";
+import { Context } from "../store/appContext";
+import "../../styles/animations.scss";
 
-export const Account = () => (
-	<div className="account container">
-		<h1 className="title2">Account Information</h1>
-		<div className="container table">
-			<Table responsive="sm" striped>
-				<tr>
-					<th>User Id</th>
-					<td>12345</td>
-					<th>Name</th>
-					<td>hello hello</td>
-				</tr>
+export const Account = () => {
+	const { store, actions } = useContext(Context);
 
-				<tr>
-					<th>Reward Points</th>
-					<td>360 pts.</td>
-					<th>Number of Orders</th>
-					<td>12</td>
-				</tr>
-			</Table>
+	return (
+		<div className="account container">
+			<h1 className="title2">Account Information</h1>
+			<div className="container table">
+				<Table responsive="sm" striped>
+					{store.account.map((item, index) => (
+						<>
+							<tr key={index}>
+								<th>User ID</th>
+								<td>{item.user_id}</td>
+								<th>Name</th>
+								<td>{item.name}</td>
+							</tr>
+							<tr key={index}>
+								<th>Reward Points</th>
+								<td>{item.points}</td>
+								<th>Number of Orders</th>
+								<td>{item.orders}</td>
+							</tr>
+						</>
+					))}
+				</Table>
+			</div>
+			<Link to="/">
+				<button>Go back</button>
+			</Link>
 		</div>
-		<Link to="/">
-			<button>Go back</button>
-		</Link>
-	</div>
-);
+	);
+};
