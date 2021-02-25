@@ -1,4 +1,5 @@
 import { Specials } from "../views/specials";
+import regeneratorRuntime from "regenerator-runtime";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	const baseUrl = "https://thedoordrop.herokuapp.com/api";

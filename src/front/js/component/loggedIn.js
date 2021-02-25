@@ -9,6 +9,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import "../../styles/modals.scss";
 import "../../styles/home.scss";
 import { Context } from "../store/appContext";
+import regeneratorRuntime from "regenerator-runtime";
 
 export const LoginComponent = () => {
 	const { store, actions } = useContext(Context);
