@@ -21,6 +21,7 @@ export const LoginComponent = () => {
 	const [state, setState] = useState("");
 	const [zip, setZip] = useState("");
 	const [phone, setPhone] = useState("");
+	const [password, setPassword] = useState("");
 
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);

@@ -259,6 +259,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 						})
 					);
 			},
+
+			getAccount: async account_id => {
+				let response = fetch(`${baseUrl}/register/${account_id}`);
+				let accounts = await response.json();
+				if (response.ok) {
+					setStore({
+						account: accounts
+					});
+				}
+			},
+
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
