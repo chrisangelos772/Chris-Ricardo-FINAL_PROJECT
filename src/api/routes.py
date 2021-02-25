@@ -131,6 +131,7 @@ def profile(user_id):
 
 # (GET user profile)
 @api.route('/user/all', methods=['GET'])
+@jwt_required()
 def profile_all():
     user = User.query.all()
     data = {
