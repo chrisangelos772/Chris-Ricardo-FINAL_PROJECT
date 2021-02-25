@@ -38,6 +38,7 @@ class User(db.Model):
             "zip_code": self.zip_code,
             "phone": self.phone,
             "rewards_pts": self.rewards_pts,
+            "orders": [o.serialize() for o in self.orders]
             # do not serialize the password, its a security breach
         }
 

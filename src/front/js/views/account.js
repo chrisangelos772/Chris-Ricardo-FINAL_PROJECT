@@ -18,28 +18,29 @@ import "../../styles/animations.scss";
 
 export const Account = () => {
 	const { store, actions } = useContext(Context);
+	const account = store.account;
 
 	return (
 		<div className="account container">
 			<h1 className="title2">Account Information</h1>
 			<div className="container table">
 				<Table responsive="sm" striped>
-					{store.account.map((item, index) => (
-						<>
-							<tr key={index}>
-								<th>User ID</th>
-								<td>{item.user_id}</td>
-								<th>Name</th>
-								<td>{item.name}</td>
-							</tr>
-							<tr key={index}>
-								<th>Reward Points</th>
-								<td>{item.points}</td>
-								<th>Number of Orders</th>
-								<td>{item.orders}</td>
-							</tr>
-						</>
-					))}
+					<tbody>
+						<tr>
+							<th>User ID</th>
+							<td>{account.id}</td>
+							<th>Name</th>
+							<td>
+								{account.first_name} {account.last_name}
+							</td>
+						</tr>
+						<tr>
+							<th>Reward Points</th>
+							<td>{account.rewards_pts}</td>
+							<th>Number of Orders</th>
+							<td>{account.orders.length}</td>
+						</tr>
+					</tbody>
 				</Table>
 			</div>
 			<Link to="/">
