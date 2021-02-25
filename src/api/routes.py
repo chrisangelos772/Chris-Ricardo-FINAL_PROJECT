@@ -54,6 +54,12 @@ def register():
         email=email, 
         password=generate_password_hash(password),
         rewards_pts=0, 
+        first_name=firstName,
+        last_name=lastName,
+        city=city,
+        state=state,
+        zip_code=zipCode,
+        phone=phone,
         is_active=True)
     db.session.add(user)
     db.session.commit()

@@ -21,6 +21,7 @@ export const LoginComponent = () => {
 	const [state, setState] = useState("");
 	const [zip, setZip] = useState("");
 	const [phone, setPhone] = useState("");
+	const [password, setPassword] = useState("");
 
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
@@ -149,28 +150,32 @@ export const LoginComponent = () => {
 							</Form.Group>
 							<Form.Group controlId="formBasicPhone">
 								<Form.Label>Phone Number</Form.Label>
-								<Form.Control type="phone" />
+								<Form.Control type="phone" value={phone} onChange={e => setPhone(e.target.value)} />
 							</Form.Group>
 							<Form.Group controlId="formBasicEmail">
 								<Form.Label>Email address</Form.Label>
-								<Form.Control type="email" />
+								<Form.Control type="email" value={email} onChange={e => setEmail(e.target.value)} />
 							</Form.Group>
 							<Form.Group controlId="formBasicCity">
 								<Form.Label>City</Form.Label>
-								<Form.Control type="city" />
+								<Form.Control type="city" value={city} onChange={e => setCity(e.target.value)} />
 							</Form.Group>
 							<Form.Group controlId="formBasicState">
 								<Form.Label>State</Form.Label>
-								<Form.Control type="state" />
+								<Form.Control type="state" value={state} onChange={e => setState(e.target.value)} />
 							</Form.Group>
 							<Form.Group controlId="formBasicZip">
 								<Form.Label>Zip Code</Form.Label>
-								<Form.Control type="zip code" />
+								<Form.Control type="zip code" value={zip} onChange={e => setZip(e.target.value)} />
 							</Form.Group>
 
 							<Form.Group controlId="formBasicPassword">
 								<Form.Label>Password</Form.Label>
-								<Form.Control type="password" />
+								<Form.Control
+									type="password"
+									value={password}
+									onChange={e => setPassword(e.target.value)}
+								/>
 							</Form.Group>
 							<Form.Group controlId="formBasicCheckbox">
 								<Form.Check
