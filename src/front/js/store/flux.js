@@ -12,7 +12,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					size: "Plate",
 					img: "https://images.pitboss-grills.com/catalog/recipes/1200px/IMG_0488.jpg",
 					description:
-						"Chicken, Beef or Vegan Quesadilla's. With your choice of pepperjack, monterey, cheddar or smoked gouda cheese, green peppers and red peppers, and black beans.            served with sour cream, salsa and guacamole, you cannot go wrong with these!"
+						"Grilled Chicken, pepperjack cheese, green peppers, red peppers, and black beans. Served with sour cream, salsa and guacamole."
 				},
 				{
 					name: "Ultimate Nachos",
@@ -20,7 +20,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					size: "plate",
 					img: "https://www.nowfindglutenfree.com/wp-content/uploads/sites/2/2016/02/nachos.gif",
 					description:
-						"Stacked with ground beef (chicken on request), black beans, purple onions, green peppers, red peppers, and yellow peppers, corn, smothered in melted Smoked Gouda and shredded cheddar cheese, black olives, jalapeno's, sour cream, Guac, and salsa. This truely is a MONSTER of an appetizer."
+						"Stacked with ground beef, black beans, purple onions, corn, smothered in melted cheese, black olives, jalapeno's, sour cream, Guac, and salsa."
 				},
 				{
 					name: "Bang Bang Shrimp",
@@ -37,7 +37,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					img:
 						"https://www.yummyhealthyeasy.com/wp-content/uploads/2018/06/Low-Carb-Avocado-Shrimp-Cucumber-Appetizer-5.jpg",
 					description:
-						"Lightly blackened shrimp placed on top of our homemade Guacamole on top of a freshly sliced cucumber. Combining the spice of the grilled shrimp with the clean flavor of the guacamole and cucumber, you get a sublime flavor that tantalizes your taste buds."
+						"Lightly blackened shrimp placed on top of our homemade Guacamole on top of a freshly sliced cucumber."
 				},
 				{
 					name: "Tomato Bisque",
@@ -45,7 +45,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					size: "cup",
 					img: "https://yupitsvegan.com/wp-content/uploads/2019/12/vegan-tomato-soup-3.jpg",
 					description:
-						"Fresh, homemade tomato bisque soup topped with basil leaves and paired with a grilled cheese. This soup will leave you warm and satisfied."
+						"Fresh, homemade tomato bisque soup topped with basil leaves, paired with a grilled cheese."
 				},
 				{
 					name: "Chicken Ceasar Salad",
@@ -53,8 +53,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					size: "plate",
 					img:
 						"https://fccae8b066ab962232a8-1b1069f819384d721973c1b8d8e32756.ssl.cf1.rackcdn.com/GaryTardiff-41.jpg",
-					description:
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et"
+					description: "Grilled Chicken parmesian cheese and iceberg lettuce."
 				}
 			],
 			foods: {
