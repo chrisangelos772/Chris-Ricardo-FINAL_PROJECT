@@ -19,10 +19,15 @@ api = Blueprint('api', __name__)
 
 @api.route('/register', methods=['POST'])
 def register():
+    # make sure request is a json
+    if not request.is_json:
+        return jsonify({"msg": "Missing JSON in request"}), 400
+
     email = request.json.get("email", None)
     password = request.json.get("password", None)
     first_name = request.json.get("first_name", None)
     last_name = request.json.get("last_name", None)
+    address = request.json.get("address", None)
     city = request.json.get("city", None)
     state = request.json.get("state", None)
     zip_code = request.json.get("zip_code", None)
@@ -36,6 +41,8 @@ def register():
         return jsonify({"msg": "first_name is required"}), 400
     if not last_name:
         return jsonify({"msg": "last_name is required"}), 400
+    if not address:
+        return jsonify({"msg": "address is required"}), 400
     if not city:
         return jsonify({"msg": "city is required"}), 400
     if not state:
@@ -54,11 +61,12 @@ def register():
         email=email, 
         password=generate_password_hash(password),
         rewards_pts=0, 
-        first_name=firstName,
-        last_name=lastName,
+        first_name=first_name,
+        last_name=last_name,
+        address=address,
         city=city,
         state=state,
-        zip_code=zipCode,
+        zip_code=zip_code,
         phone=phone,
         is_active=True)
     db.session.add(user)

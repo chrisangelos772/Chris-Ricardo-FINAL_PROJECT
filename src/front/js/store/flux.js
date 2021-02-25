@@ -241,24 +241,38 @@ const getState = ({ getStore, getActions, setStore }) => {
 			signUp: data => {
 				return fetch(`${baseUrl}/register/`, {
 					method: "POST",
+					mode: "cors",
+					headers: {
+						"Content-Type": "application/json"
+					},
 					body: JSON.stringify(data)
 				})
 					.then(res => res.json())
-					.then(data => true);
+					.then(data => true)
+					.catch(err => err);
 			},
 			signIn: data => {
 				return fetch(`${baseUrl}/login/`, {
 					method: "POST",
+					mode: "cors",
+					headers: {
+						"Content-Type": "application/json"
+					},
 					body: JSON.stringify(data)
 				})
-					.then(res => res.json())
-					.then(data =>
+					.then(res => {
+						if (!res.ok) throw new Error(`${res.status} - ${res.statusText}`);
+						return res.json();
+					})
+					.then(data => {
 						setStore({
 							loggedIn: true,
 							token: data.token,
-							user: data.user
-						})
-					);
+							account: data.user
+						});
+						return true;
+					})
+					.catch(err => err);
 			},
 			changeColor: (index, color) => {
 				//get the store
