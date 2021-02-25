@@ -155,17 +155,17 @@ export const LoginComponent = () => {
 								<Form.Label>Email address</Form.Label>
 								<Form.Control type="email" />
 							</Form.Group>
-							<Form.Group controlId="formBasicEmail">
+							<Form.Group controlId="formBasicCity">
 								<Form.Label>City</Form.Label>
-								<Form.Control type="email" />
+								<Form.Control type="city" />
 							</Form.Group>
-							<Form.Group controlId="formBasicEmail">
+							<Form.Group controlId="formBasicState">
 								<Form.Label>State</Form.Label>
-								<Form.Control type="email" />
+								<Form.Control type="state" />
 							</Form.Group>
-							<Form.Group controlId="formBasicEmail">
+							<Form.Group controlId="formBasicZip">
 								<Form.Label>Zip Code</Form.Label>
-								<Form.Control type="email" />
+								<Form.Control type="zip code" />
 							</Form.Group>
 
 							<Form.Group controlId="formBasicPassword">
