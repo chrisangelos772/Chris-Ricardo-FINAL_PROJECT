@@ -65,7 +65,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						img:
 							"https://cdn-prd.healthymealplans.com/recipe/e19c5315c0943362df71a3c84b466f59-Shrimp-Scampi-Pasta-Alt_16x9_1200_Healthy-Meal-Plans.jpg",
 						description:
-							"Shrimp sautéed in a garlic butter sauce, tossed with asparagus, tomatoes, and angel hair pasta.this dinner will have you feeling as if you're in the Cinque Terre, Italy. Best paired with a White Wine."
+							"Shrimp sautéed in a garlic butter sauce, tossed with asparagus, tomatoes, and angel hair pasta."
 					}
 				]
 			},
