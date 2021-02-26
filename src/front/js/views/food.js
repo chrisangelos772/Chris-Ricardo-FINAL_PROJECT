@@ -20,10 +20,8 @@ export const Food = () => {
 				<Row>
 					{store.products.map((item, index) => (
 						<Col xs={12} sm={4} key={index} className="mb-4">
-							<Card className="h-100">
-								{/* <Link to={`/product/${index}`}> */}
+							<Card>
 								<Card.Img variant="top" src={item.img} />
-								{/* </Link> */}
 								<Card.Body>
 									<Card.Title>{item.name}</Card.Title>
 									<Card.Text className="description">{item.description}</Card.Text>

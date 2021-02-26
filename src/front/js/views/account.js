@@ -18,53 +18,29 @@ import "../../styles/animations.scss";
 
 export const Account = () => {
 	const { store, actions } = useContext(Context);
-	const handleAccount = async () => {
-		// email = request.json.get("email", None)
-		// password = request.json.get("password", None)
-		// first_name = request.json.get("first_name", None)
-		// last_name = request.json.get("last_name", None)
-		// city = request.json.get("city", None)
-		// state = request.json.get("state", None)
-		// zip_code = request.json.get("zip_code", None)
-		// phone = request.json.get("phone", None)
-		// rewards_pts = request.json.get("rewards_pts", None)
-		let data = {
-			first_name: firstName,
-			last_name: lastName,
-			rewards_pts: rewards,
-			id: id
-		};
-
-		try {
-			let account = await actions.getAccount(data);
-		} catch (e) {
-			console.error(e);
-		}
-	};
+	const account = store.account;
 
 	return (
 		<div className="account container">
 			<h1 className="title2">Account Information</h1>
 			<div className="container table">
 				<Table responsive="sm" striped>
-					{store.account.map((item, index) => {
-						return (
-							<>
-								<tr key={index}>
-									<th>User ID</th>
-									<td>{item.id}</td>
-									<th>Name</th>
-									<td>{item.name}</td>
-								</tr>
-								<tr key={index}>
-									<th>Reward Points</th>
-									<td>{item.points}</td>
-									<th>Number of Orders</th>
-									<td>{item.orders}</td>
-								</tr>
-							</>
-						);
-					})}
+					<tbody>
+						<tr>
+							<th>User ID</th>
+							<td>{account.id}</td>
+							<th>Name</th>
+							<td>
+								{account.first_name} {account.last_name}
+							</td>
+						</tr>
+						<tr>
+							<th>Reward Points</th>
+							<td>{account.rewards_pts}</td>
+							<th>Number of Orders</th>
+							<td>{account.orders.length}</td>
+						</tr>
+					</tbody>
 				</Table>
 			</div>
 			<Link to="/">
