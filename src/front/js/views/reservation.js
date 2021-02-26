@@ -16,7 +16,8 @@ export const Reservation = () => (
 	<div className="container">
 		<h1 className="title1">RESERVATION</h1>
 		<p className="text">
-			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+			Fill out the form below to place a reservation. We will send you a confirmation email. <br /> (Must already
+			have an account in order to place a reservation)
 		</p>
 		<Form>
 			<Form.Row>

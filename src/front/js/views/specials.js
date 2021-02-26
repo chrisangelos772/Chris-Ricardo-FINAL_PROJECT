@@ -21,10 +21,9 @@ export const Specials = () => {
 				<Row>
 					{store.foods.specials.map((item, index) => (
 						<Col xs={12} sm={6} key={index} className="mb-4">
-							<Card className="h-100">
-								{/* <Link to={`/product/${index}`}> */}
+							<Card className="">
 								<Card.Img variant="top" src={item.img} />
-								{/* </Link> */}
+
 								<Card.Body>
 									<Card.Title>{item.name}</Card.Title>
 									<Card.Text className="description">{item.description}</Card.Text>

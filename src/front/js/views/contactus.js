@@ -15,9 +15,7 @@ import FormLabel from "react-bootstrap/FormLabel";
 export const ContactUs = () => (
 	<div className="container menu">
 		<h1 className="title1">CONTACT US</h1>
-		<p className="text">
-			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-		</p>
+		<p className="text">Feel free to contact us for any questions or concerns!</p>
 
 		<Form>
 			<Form.Row>
